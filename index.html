@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue Hello</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>{{title}}!</h1>
+
+    <input  type="text" v-model="words">
+    <h3>{{words}}</h3>
+
+    <h2 :class="clock % 2 === 0 ? 'blue' : '' ">{{clock}}</h2>
+
+    <button @click="increase">Incrementa contatore</button>
+    <span :class="counter % 2 === 0 ? 'blue' : ''">
+      <h1>Contatore: {{counter}}</h1>
+    </span>
+    <div>
+      <img src="img/logo.svg" :class="counter % 2 === 0 ? 'none' : ''">
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
