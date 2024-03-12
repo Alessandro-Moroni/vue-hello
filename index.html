@@ -14,14 +14,14 @@
     <input  type="text" v-model="words">
     <h3>{{words}}</h3>
 
-    <h2 :class="clock % 2 === 0 ? 'blue' : '' ">{{clock}}</h2>
+    <h2 :class="minuti % 2 === 0 ? 'blue' : '' ">{{clock}}</h2>
 
     <button @click="increase">Incrementa contatore</button>
     <span :class="counter % 2 === 0 ? 'blue' : ''">
       <h1>Contatore: {{counter}}</h1>
     </span>
     <div>
-      <img src="img/logo.svg" :class="counter % 2 === 0 ? 'none' : ''">
+      <img :src="img" :class="counter % 2 === 0 ? 'none' : ''">
     </div>
   </div>
 

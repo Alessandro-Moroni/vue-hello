@@ -8,6 +8,8 @@ createApp({
       clock: '',
       counter: 0,
       isEven: false,
+      minuti: 0,
+      img: "img/logo.svg",
     }
   },
 
@@ -19,7 +21,8 @@ createApp({
       const m = d.getMinutes() < 10 ? '0'+d.getMinutes() : d.getMinutes();
       const h = d.getHours() < 10 ? '0'+d.getHours() : d.getHours();
       this.clock = `${h}:${m}:${s}`;
-    },
+      this.minuti = d.getMinutes()
+      },
   
     startClock(){
       
